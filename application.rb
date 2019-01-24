@@ -23,7 +23,7 @@ class Application
 			# puts " 2 -> afficher les ragots"
 			# puts " 3 -> supprimer un ragot"
 			puts " 4 -> quitter l'application"
-			choice =  gets.chomp.to_i
+			choice = 1  #gets.chomp.to_i
 
 			# ici la redirection en fonction du choix
 			case choice

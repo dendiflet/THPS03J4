@@ -15,7 +15,9 @@ class Controller
 	def create_game
 		params = @view.new_game		
     @new_game = Game.new(params[:j1], params[:j2] )
-    binding.pry
+
+#binding.pry
+
     partie
 	end
 
@@ -24,8 +26,11 @@ class Controller
     # affichage du jeux
     @view.show(@new_game.j1m, @new_game.j2m)
     # demande la case a jouer
-binding.pry
+
+#binding.pry
+
     new_case_played = @view.turn_ask(@new_game.cases_played, @new_game.actual_player)
+
     # ajout au cases jouées de chaque joueurs
     if @new_game.actual_player == @new_game.j1
     	@new_game.j1m << new_case_played
