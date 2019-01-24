@@ -20,17 +20,18 @@ class Game
     @j1 = name_p1
     @j2 = name_p2
     #remplie pour les tests
-    @j1m = ["A1", "B3"]
-    @j2m = ["B2"]
-    @actual_player = @j1
-    @case_just_played = ["B3"]
-    @cases_played = ["A1", "B2", "B3"]
+    @j1m = []
+    @j2m = []
+    @actual_player = []
+    @case_just_played = []
+    @cases_played = []
     
 
     #who start
-    s = rand(1-2) 
+    s = rand(1..2) 
     #enregistrement du prénom de qui va commencer dans la variable destinée
     case s
+
     when 1
       @who_started = @j1
     when 2
