@@ -6,16 +6,21 @@ require 'pry'
 
 class Game
 
-	attr_reader :j1, :j2, :who_started
+	attr_reader :j1, :j2, :who_started, :j1m, :j2m
+
+
 
   def initialize(name_p1,name_p2)
+    @j1m = Array.new
+    @j2m = Array.new
     @j1 = name_p1
     @j2 = name_p2
-    @cases_played = []
-    @j1m = []
-    @j2m = []
+    @cases_played = [2]
+#binding.pry
+    @j1m = ["A1"]
+    #@j2m << B2
     @actual_player = @j1
-    @case_just_played = []
+    #@case_just_played = [B2]
 
     #qui va commencer
 		s = rand(1-2) 
@@ -30,7 +35,4 @@ class Game
 #    nb_case_filled = cases_played.size
   end
 
-  # def read_and_return
-  # 	print 
-  # end
 end

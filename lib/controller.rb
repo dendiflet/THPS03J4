@@ -13,12 +13,17 @@ class Controller
   end
 
 	def create_game
-		params = @view.new_game
-    new_game = Game.new(params[:j1], params[:j2] )
-    system ("new_game")
+		params = @view.new_game		
+    @new_game = Game.new(params[:j1], params[:j2] )
     binding.pry
-    
+
+
+    @view.show(@new_game.j1m, @new_game.j2m)
+
 	end
+
+
+
 end
 
 
